@@ -24,8 +24,8 @@ public class Window {
 
 	public static void changeColor(Color color) {
 		
-		/*El método getContentPane() recupera la capa del panel de contenido para que 
-		pueda agregarle un objeto. En este método changeColor, la modificación es cambiar el color del panel de contenido*/
+		/*El mï¿½todo getContentPane() recupera la capa del panel de contenido para que 
+		pueda agregarle un objeto. En este mï¿½todo changeColor, la modificaciï¿½n es cambiar el color del panel de contenido*/
 		
 		frame.getContentPane().setBackground(color);
 		
@@ -66,7 +66,17 @@ public class Window {
 		btn1.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				changeColor(new Color(0, 232, 228));
+				int response= JOptionPane.showConfirmDialog(null, "Desea continuar?", "Confirmar", JOptionPane.YES_NO_OPTION,JOptionPane.QUESTION_MESSAGE);
+				if (response==JOptionPane.YES_OPTION) {
+					JOptionPane.showMessageDialog(null,"SUCCESSFUL COLOR CHANGE");
+					changeColor(new Color(0, 232, 228));
+				}else if(response==JOptionPane.NO_OPTION) {
+					JOptionPane.showMessageDialog(null,"THE BACKGROUND COLOR HAS NOT BEEN CHANGED");
+					System.out.println("Se ha negado el cambio al color");
+				}else if(response==JOptionPane.CANCEL_OPTION) {
+					
+					System.out.println("Cambio de color cancelado");
+				}
 			}
 		});
 		frame.add(btn1);
@@ -76,7 +86,17 @@ public class Window {
 		btn2.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				changeColor(new Color(219, 159, 255));
+				int response= JOptionPane.showConfirmDialog(null, "Desea continuar?", "Confirmar", JOptionPane.YES_NO_OPTION,JOptionPane.QUESTION_MESSAGE);
+				if (response==JOptionPane.YES_OPTION) {
+					JOptionPane.showMessageDialog(null,"SUCCESSFUL COLOR CHANGE");
+					changeColor(new Color(219, 159, 255));
+				}else if(response==JOptionPane.NO_OPTION) {
+					JOptionPane.showMessageDialog(null,"THE BACKGROUND COLOR HAS NOT BEEN CHANGED");
+					System.out.println("Se ha negado el cambio al color");
+				}else if(response==JOptionPane.CANCEL_OPTION) {
+					
+					System.out.println("Cambio de color cancelado");
+				}
 			}
 		});
 		frame.add(btn2);
@@ -86,7 +106,17 @@ public class Window {
 		btn3.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				changeColor(new Color(255, 159, 235));
+				int response= JOptionPane.showConfirmDialog(null, "Desea continuar?", "Confirmar", JOptionPane.YES_NO_OPTION,JOptionPane.QUESTION_MESSAGE);
+				if (response==JOptionPane.YES_OPTION) {
+					JOptionPane.showMessageDialog(null,"SUCCESSFUL COLOR CHANGE");
+					changeColor(new Color(255, 159, 235));
+				}else if(response==JOptionPane.NO_OPTION) {
+					JOptionPane.showMessageDialog(null,"THE BACKGROUND COLOR HAS NOT BEEN CHANGED");
+					System.out.println("Se ha negado el cambio al color");
+				}else if(response==JOptionPane.CANCEL_OPTION) {
+					
+					System.out.println("Cambio de color cancelado");
+				}
 			}
 		});
 		frame.add(btn3);
